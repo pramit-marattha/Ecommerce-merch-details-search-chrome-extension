@@ -1,0 +1,25 @@
+  
+{
+    "name": "Merch Searchify",
+    "version": "1.0.0",
+    "description": "Search your product on google and youtube instantly from ecommerce site",
+    "manifest_version": 2,
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "include_globs": ["*://*.sastodeal.*/*","*://*.nepkart.*/*","*://*.dealgara.*/*","*://*.baleyo.*/*","*://*.istore.*/*","*://*.neplify.*/*","*://*.style97.*/*","*://*.smartdoko.*/*","*://*.meroshopping.*/*","*://*.dokoman.*/*","*://*.hamrobazaar.*/*","*://*.bigpasal.*/*","*://*.daraz.*/*"],
+        "js": ["extension/productReview.js"],
+        "all_frames": true,
+        "run_at": "document_start"
+      }
+    ],
+    "browser_action": {
+      "default_icon" : "googleicon_prod.png"
+    },
+    "web_accessible_resources": ["yticon_prod.png","googleicon_prod.png"],
+    "icons" : {
+      "32" : "googleicon_prod32.png",
+      "48" : "googleicon_prod48.png"
+    }
+  }
